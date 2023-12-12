@@ -1,0 +1,212 @@
+/* Reset styles for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+/* Apply styles to the entire body of the webpage */
+body {
+    height: 100vh; /* Set the height of the body to the full viewport height */
+    display: flex;
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    background: linear-gradient(to bottom, #87CEEB, #06283D); /* Apply a linear gradient background */
+}
+
+/* Styling for the main container */
+.container {
+    position: relative;
+    width: 400px;
+    height: 105px;
+    background: #FFF;
+    padding: 28px 32px;
+    overflow: hidden;
+    border-radius: 18px;
+    font-family: 'Roboto', sans-serif;
+    transition: 0.6s ease-out; /* Add a transition effect for smooth animations */
+}
+
+/* Styling for the search box */
+.search-box {
+    width: 100%;
+    height: min-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Styling for the search input */
+.search-box input {
+    color: #06283D;
+    width: 80%;
+    font-size: 24px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding-left: 32px;
+}
+
+/* Styling for the search input placeholder */
+.search-box input::placeholder {
+    font-size: 20px;
+    font-weight: 500;
+    color: #06283D;
+    text-transform: capitalize;
+}
+
+/* Styling for the search button */
+.search-box button {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    color: #06283D;
+    background: #DFF6FF;
+    border-radius: 50%;
+    font-size: 22px;
+    transition: 0.4s ease; /* Add a transition effect for smooth hover animations */
+}
+
+/* Hover effect for the search button */
+.search-box button:hover {
+    color: #FFF;
+    background: #06283D;
+}
+
+/* Styling for the location icon in the search box */
+.search-box i {
+    position: absolute;
+    color: #06283D;
+    font-size: 28px;
+}
+
+/* Styling for the weather box */
+.weather-box {
+    text-align: center;
+}
+
+/* Styling for the weather icon in the weather box */
+.weather-box img {
+    width: 60%;
+    margin-top: 30px;
+}
+
+/* Styling for the temperature display in the weather box */
+.weather-box .temperature {
+    position: relative;
+    color: #06283D;
+    font-size: 4rem;
+    font-weight: 800;
+    margin-top: 30px;
+    margin-left: -16px;
+}
+
+/* Styling for the temperature unit in the weather box */
+.weather-box .temperature span {
+    position: absolute;
+    margin-left: 4px;
+    font-size: 1.5rem;
+}
+
+/* Styling for the weather description in the weather box */
+.weather-box .description {
+    color: #06283D;
+    font-size: 22px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+/* Styling for additional weather details */
+.weather-details {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+/* Styling for humidity and wind details */
+.weather-details .humidity,
+.weather-details .wind {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 100px;
+}
+
+/* Styling for humidity details */
+.weather-details .humidity {
+    padding-left: 20px;
+    justify-content: flex-start;
+}
+
+/* Styling for wind details */
+.weather-details .wind {
+    padding-right: 20px;
+    justify-content: flex-end;
+}
+
+/* Styling for icons in weather details */
+.weather-details i {
+    color: #06283D;
+    font-size: 26px;
+    margin-right: 10px;
+    margin-top: 6px;
+}
+
+/* Styling for spans in weather details */
+.weather-details span {
+    color: #06283D;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+/* Styling for paragraphs in weather details */
+.weather-details p {
+    color: #06283D;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Styling for the not-found container */
+.not-found {
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+    scale: 0; /* Initial scale for hiding */
+    opacity: 0; /* Initial opacity for hiding */
+    display: none;
+}
+
+/* Styling for the image in the not-found container */
+.not-found img {
+    width: 70%;
+}
+
+/* Styling for the paragraph in the not-found container */
+.not-found p {
+    color: #06283D;
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 12px;
+}
+
+/* Initial styling for hiding weather box and details with scale and opacity */
+.weather-box,
+.weather-details {
+    scale: 0;
+    opacity: 0;
+}
+
+/* Animation for fade-in effect */
+.fadeIn {
+    animation: 0.5s fadeIn forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeIn {
+    to {
+        scale: 1;
+        opacity: 1;
+    }
+}
